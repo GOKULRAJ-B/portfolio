@@ -28,3 +28,38 @@ for (let i = 0; i < 35; i++) {
     particle.style.animationDuration = (Math.random() * 10 + 10) + "s";
     particlesContainer.appendChild(particle);
 }
+
+const cards = document.querySelectorAll(".skill-card");
+
+cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateX = (y / rect.height - 0.5) * 10;
+        const rotateY = (x / rect.width - 0.5) * -10;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+    });
+});
+
+
+const text = "Transforming Raw Data → Meaningful Insights";
+const typingElement = document.getElementById("typing");
+
+let index = 0;
+
+function typeEffect() {
+    if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 40);
+    }
+}
+
+typeEffect();

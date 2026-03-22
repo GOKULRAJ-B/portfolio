@@ -521,3 +521,464 @@ nav a:hover {
         text-align: center;
     }
 } 
+
+
+/* ===============================
+   SKILLS - 3 COLUMN LAYOUT
+=================================*/
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* Each category box */
+.skills-box {
+    background: #112240;
+    padding: 30px;
+    border-radius: 18px;
+    transition: 0.4s ease;
+}
+
+.skills-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 247, 255, 0.15);
+}
+
+.skills-box h3 {
+    color: #00f7ff;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+/* Inner grid */
+.skills-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Smaller cards inside box */
+.skills-items .skill-card {
+    padding: 20px;
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===============================
+   MODERN SKILLS UI
+=================================*/
+
+/* Section Title */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00f7ff, #00c3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* Glassmorphism Panel */
+.glass {
+    background: rgba(17, 34, 64, 0.55);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0, 247, 255, 0.2);
+    position: relative;
+    transition: 0.4s ease;
+}
+
+/* Glow border */
+.glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(120deg, #00f7ff, transparent, #00f7ff);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* Hover glow */
+.glass:hover {
+    box-shadow: 0 0 25px rgba(0, 247, 255, 0.3);
+    transform: translateY(-8px);
+}
+
+/* Headings */
+.skills-box h3 {
+    color: #00f7ff;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+/* Inner grid */
+.skills-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* Skill Card */
+.skill-card {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+/* ICON FIX (consistent size + clean) */
+.skill-card img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 6px rgba(0, 247, 255, 0.4));
+}
+
+/* Text */
+.skill-card p {
+    font-size: 0.9rem;
+    color: #ccd6f6;
+}
+
+/* Hover neon + 3D */
+.skill-card:hover {
+    transform: rotateX(6deg) rotateY(-6deg) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 247, 255, 0.2);
+    background: rgba(0, 247, 255, 0.08);
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===============================
+   ABOUT SECTION - FUTURISTIC UI
+=================================*/
+
+.about-section {
+    position: relative;
+}
+
+/* Gradient neon title */
+.about-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    background: linear-gradient(90deg, #00f7ff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
+}
+
+/* Layout */
+.about-container {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Glass card */
+.about-card {
+    background: rgba(17, 34, 64, 0.55);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    padding: 35px;
+    border: 1px solid rgba(0, 247, 255, 0.2);
+    position: relative;
+    transition: 0.4s ease;
+}
+
+/* Glow border */
+.about-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(120deg, #00f7ff, transparent, #8a2be2);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* Hover effect */
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(0, 247, 255, 0.25);
+}
+
+/* Text styling */
+.about-card p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #dce3ff;
+    margin-bottom: 18px;
+}
+
+/* ===============================
+   RIGHT SIDE VISUAL (DATA GRAPH)
+=================================*/
+
+.about-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animated nodes */
+.data-visual {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+/* Nodes */
+.data-visual span {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #00f7ff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #00f7ff;
+    animation: floatNode 4s infinite ease-in-out alternate;
+}
+
+/* Position nodes */
+.data-visual span:nth-child(1) { top: 10%; left: 20%; }
+.data-visual span:nth-child(2) { top: 40%; left: 80%; }
+.data-visual span:nth-child(3) { top: 70%; left: 30%; }
+.data-visual span:nth-child(4) { top: 85%; left: 70%; }
+
+/* Connecting lines */
+.data-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(#00f7ff33, #00f7ff33),
+        linear-gradient(#00f7ff33, #00f7ff33);
+    background-size: 2px 100%, 100% 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+}
+
+/* Animation */
+@keyframes floatNode {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-12px); }
+}
+
+/* ===============================
+   BACKGROUND ENHANCEMENT
+=================================*/
+
+/* stronger particles glow */
+.particles span {
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 247, 255, 0.6);
+    box-shadow: 0 0 12px rgba(0, 247, 255, 0.8);
+}
+
+/* subtle depth blur */
+.grid-bg::before {
+    filter: blur(1px);
+    opacity: 0.7;
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+
+@media (max-width: 900px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-visual {
+        margin-top: 30px;
+    }
+}
+
+
+/* ===============================
+   ABOUT - FULL VISUAL DESIGN
+=================================*/
+
+.about-section {
+    position: relative;
+    padding: 140px 10%;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* BACKGROUND IMAGE (IMPORTANT) */
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("assets/about-bg.png") center/cover no-repeat;
+    opacity: 0.35; /* adjust visibility */
+    z-index: -2;
+}
+
+/* DARK OVERLAY */
+.about-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 40%, #0a192f 90%);
+    z-index: -1;
+}
+
+/* TITLE */
+.about-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+
+    background: linear-gradient(90deg, #00f7ff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
+}
+
+/* CENTER WRAPPER */
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* GLASS CARD */
+.about-card {
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 20px;
+
+    background: rgba(10, 25, 47, 0.55);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(0, 247, 255, 0.25);
+    position: relative;
+
+    transition: 0.4s ease;
+}
+
+/* GLOW BORDER */
+.about-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+
+    background: linear-gradient(120deg, #00f7ff, transparent, #8a2be2);
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* TEXT */
+.about-card p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #dce3ff;
+    margin-bottom: 20px;
+}
+
+/* HOVER EFFECT */
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(0, 247, 255, 0.25);
+}
+
+
+
+
+
+.about-section::before {
+    animation: zoomBg 20s infinite alternate;
+}
+
+@keyframes zoomBg {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.particles span {
+    box-shadow: 0 0 15px #00f7ff;
+}
+
+
+/* ===============================
+   TYPING TEXT
+=================================*/
+
+.typing-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #00f7ff;
+    letter-spacing: 1px;
+}
+
+/* blinking cursor */
+#typing::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
