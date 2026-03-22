@@ -1,3 +1,23 @@
+// Theme Toggle
+const themeBtn = document.getElementById('theme-btn');
+const themeIcon = themeBtn.querySelector('i');
+
+if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    themeIcon.classList.replace('fa-sun', 'fa-moon');
+}
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    if (document.body.classList.contains('light-mode')) {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+    } else {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
 // Scroll Reveal
 const sections = document.querySelectorAll(".section");
 
@@ -29,6 +49,7 @@ for (let i = 0; i < 35; i++) {
     particlesContainer.appendChild(particle);
 }
 
+// Skill Cards 3D Hover
 const cards = document.querySelectorAll(".skill-card");
 
 cards.forEach(card => {
@@ -48,7 +69,7 @@ cards.forEach(card => {
     });
 });
 
-
+// Typing Effect
 const text = "Transforming Raw Data → Meaningful Insights";
 const typingElement = document.getElementById("typing");
 
@@ -62,4 +83,5 @@ function typeEffect() {
     }
 }
 
+// Start typing effect on load
 typeEffect();
